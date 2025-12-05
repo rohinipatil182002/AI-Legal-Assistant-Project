@@ -49,7 +49,12 @@ html.rtl .main-content-main.sidebar-collapsed {
 }
 
 /* ---------------- RESPONSIVE RTL ---------------- */
-@media (max-width: 1499px) {
+@media (max-width: 1699px) {
+  html.rtl app-sidebar .sidebar {
+    right: 220px !important;
+  }
+}
+@media (max-width: 1599px) {
   html.rtl app-sidebar .sidebar {
     right: 220px !important;
   }
