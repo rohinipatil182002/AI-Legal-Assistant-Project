@@ -1,0 +1,57 @@
+<div class="sidebar" [class.open]="!isCollapsed">
+  <ul class="nav flex-column sidebar-tabs ">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="home" (click)="closeMobileSidebar()" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fas fa-home"></i>
+        <span>{{ 'HOME' | translate }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="closeMobileSidebar()" routerLink="ai-assistant" routerLinkActive="active">
+        <i class="far fa-comment"></i>
+        <span>{{ 'AI_ASSISTANT' | translate }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="closeMobileSidebar()" routerLinkActive="active" routerLink="summarize">
+        <i class="far fa-file-alt"></i>
+        <span>{{ 'SUMMARIZE' | translate }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="closeMobileSidebar()" routerLinkActive="active" routerLink="generate-document">
+        <i class="far fa-file"></i>
+        <span>{{ 'GENERATE_DOCUMENT' | translate }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="closeMobileSidebar()" routerLinkActive="active" routerLink="regulations">
+        <i class="far fa-clipboard"></i>
+        <span>{{ 'REGULATIONS' | translate }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="closeMobileSidebar()" routerLinkActive="active" routerLink="search">
+        <i class="fas fa-search"></i>
+        <span>{{ 'SEARCH_BUTTON' | translate }}</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="activity-widget mt-4">
+    <h6 class="activity-title">{{ 'ACTIVITY' | translate }}</h6>
+    <div class="activity-item">
+      <span>{{ 'AI_QUERIES' | translate }}</span>
+      <span class="activity-count">{{ 'NUMBER_127' | translate }}</span>
+    </div>
+    <div class="activity-item">
+      <span>{{ 'DOCUMENTS' | translate }}</span>
+      <span class="activity-count">{{ 'NUMBER_43' | translate }}</span>
+    </div>
+    <div class="activity-item">
+      <span>{{ 'SEARCHES' | translate }}</span>
+      <span class="activity-count">{{ 'NUMBER_89' | translate }}</span>
+    </div>
+  </div>
+</div>

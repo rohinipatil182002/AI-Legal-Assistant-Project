@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+html.rtl app-sidebar .sidebar {
+  left: auto !important;
+  right:260px !important;
+}
+
+html.rtl .main-content-main {
+  margin-left: 0 !important;
+  margin-right: 260px !important;
+  direction: rtl;
+}
+
+html.rtl .main-content-main.sidebar-collapsed {
+  margin-right: 70px !important;
+}
+
+@media (max-width: 768px) {
+  html.rtl .main-content-main {
+    margin-right: 0 !important;
+  }
+  html.rtl .main-content-main.sidebar-collapsed {
+    margin-right: 0 !important;
+  }
+
+  html.rtl app-sidebar .sidebar {
+    right: 0 !important;
+    left: auto !important;
+  }
+}

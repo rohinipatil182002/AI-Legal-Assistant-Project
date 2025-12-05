@@ -1,0 +1,64 @@
+<div class="legal-wrapper">
+
+    <div class="legal-header bg-primary text-white d-flex align-items-center">
+        <div class="container d-flex align-items-center gap-3 py-3">
+            <div class="header-icon">
+                <img class="img-bg" src="assets/Images/Icon (11).svg" alt="">
+            </div>
+            <div>
+                <h2 class="header-title mb-0">{{ 'AI_ASSISTANT_HEADER' | translate }}</h2>
+                <p class="header-subtitle mb-0">{{ 'AI_ASSISTANT_SUBTITLE' | translate }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container chat-container-wrapper">
+        <div class="chat-card">
+
+            <div class="chat-center-content text-center" *ngIf="messages.length === 0 && !isLoading">
+                <div class="chat-icon">
+                    <img src="assets/Images/Icon (10).svg" alt="">
+                </div>
+                <h5 class="chat-title">{{ 'CHAT_PLACEHOLDER_TITLE' | translate }}</h5>
+                <p class="chat-subtitle">{{ 'CHAT_PLACEHOLDER_SUBTITLE' | translate }}</p>
+            </div>
+            <div *ngIf="messages.length > 0" class="chat-messages">
+
+                <div *ngFor="let msg of messages"
+                    [ngClass]="msg.type === 'user' ? 'message user-msg' : 'message bot-msg'">
+                    <div class="msg-text">
+                        {{ msg.text }}
+                    </div>
+                </div>
+
+                <!-- <div *ngIf="isLoading" class="message bot-msg typing">
+                    <div class="msg-text">{{ 'TYPING' | translate }}</div>
+                </div> -->
+                <div *ngIf="isLoading" class="message bot-msg typing">
+                    <div class="typing-loader">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="input-section d-flex align-items-center">
+
+                <!-- <button class="upload-btn">
+                    <img src="assets/Images/Icon (12).svg" alt="">
+                </button> -->
+
+                <input type="text" class="form-control chat-input"
+                    placeholder="{{ 'CHAT_INPUT_PLACEHOLDER' | translate }}" [(ngModel)]="userInput"
+                    (keyup.enter)="sendMessage()" />
+
+                <button class="send-btn" (click)="sendMessage()">
+                    <img src="assets/Images/Icon (13).svg" alt="">
+                    {{ 'SEND' | translate }}
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

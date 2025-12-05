@@ -1,0 +1,142 @@
+<div class="main-content">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <img src="assets/Images/Icon.svg" alt="">
+                {{ 'HOME_TITLE' | translate }}
+            </h1>
+            <p class="hero-subtitle">
+                {{ 'HOME_DESC' | translate }}
+            </p>
+
+            <div class="search-box">
+                <div class="search-wrapper d-flex align-items-center">
+
+                    <div class="search-input d-flex align-items-center">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+
+                        <input type="text" class="search-field" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}">
+                    </div>
+
+                    <button class="btn search-btn px-4" routerLink="search">{{ 'SEARCH_BUTTON' | translate }}</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="card-text-top">{{ 'QUICK_ACTIONS' | translate }}</h2>
+            <img src="assets/Images/Icon (5).svg" alt="">
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-3" *ngFor="let action of quickActions">
+                <div class="action-card" [routerLink]="action.route">
+                    <div class="action-icon" [style.background-color]="action.color">
+                        <img [src]="action.icon" alt="{{action.title}}">
+                    </div>
+                    <h5 class="action-title">{{ action.title | translate }}
+                    </h5>
+                    <p class="action-description">{{action.description | translate }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <i class="far fa-clock text-primary"></i>
+                        <h5>{{ 'RECENT_SEARCHES' | translate }}</h5>
+                    </div>
+                    <div class="search-item" *ngFor="let search of recentSearches">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-search text-muted me-3"></i>
+                            <div>
+                                <div class="search-title">{{search.title | translate }}</div>
+                                <div class="search-time">{{search.time | translate }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <i class="fas fa-chart-line text-warning"></i>
+                        <h5>{{ 'LEGAL_UPDATES' | translate }}</h5>
+                    </div>
+                    <div class="update-item" *ngFor="let update of legalUpdates">
+                        <div class="d-flex align-items-start">
+                            <i class="far fa-file-alt text-warning me-3 mt-1"></i>
+                            <div>
+                                <div class="update-title">{{update.title | translate }}</div>
+                                <div class="update-description">{{update.description | translate }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="layout-div" style=" padding: 0 15px 30px;">
+        <div class="recommended-container container my-4">
+
+            <div class="section-header-last d-flex align-items-start mb-3 gap-3">
+                <img class="star-back" src="assets/Images/Icon (6).svg" alt="">
+                <div>
+                    <h5 class="last-title mb-0">{{'RECOMMENDED_FOR_YOU' | translate }}</h5>
+                    <small class="last-desc">{{'BASED_ON_ACTIVITY' | translate }}</small>
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-4">
+                    <div class="recommend-card green-card p-3">
+                        <div class="icon-box green-icon mb-3">
+                            <img src="assets/Images/Icon (7).svg" alt="">
+                        </div>
+
+                        <h6 class="recom-text mb-3">{{'RECOMMEND_1_TITLE' | translate }}</h6>
+                        <p class="recom-desc">{{'RECOMMEND_1_DESC' | translate }}</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="recommend-card blue-card p-3">
+                        <div class="icon-box blue-icon mb-3">
+                            <img src="assets/Images/Icon (8).svg" alt="">
+                        </div>
+
+                        <h6 class="recom-text mb-3">{{'RECOMMEND_2_TITLE' | translate }}</h6>
+                        <p class="recom-desc">{{'RECOMMEND_2_DESC' | translate }}</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="recommend-card purple-card p-3">
+                        <div class="icon-box purple-icon mb-3">
+                            <img src="assets/Images/Icon (9).svg" alt="">
+                        </div>
+
+                        <h6 class="recom-text mb-3">{{'RECOMMEND_3_TITLE' | translate }}</h6>
+                        <p class="recom-desc">{{'RECOMMEND_3_DESC' | translate }}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
