@@ -1,4 +1,4 @@
-html.rtl app-sidebar .sidebar {
+/* html.rtl app-sidebar .sidebar {
   left: auto !important;
   right:260px !important;
 }
@@ -25,4 +25,102 @@ html.rtl .main-content-main.sidebar-collapsed {
     right: 0 !important;
     left: auto !important;
   }
+} */
+/* ---------------- RTL GLOBAL FIX ---------------- */
+html.rtl body {
+  direction: rtl !important;
+}
+
+/* Sidebar RTL */
+html.rtl app-sidebar .sidebar {
+  left: auto !important;
+  right: 260px !important;
+}
+
+/* Main content RTL */
+html.rtl .main-content-main {
+  margin-left: 0 !important;
+  margin-right: 250px !important;
+}
+
+/* Collapsed state */
+html.rtl .main-content-main.sidebar-collapsed {
+  margin-right: 70px !important;
+}
+
+/* ---------------- RESPONSIVE RTL ---------------- */
+@media (max-width: 1499px) {
+  html.rtl app-sidebar .sidebar {
+    right: 220px !important;
+  }
+
+  html.rtl .main-content-main {
+    margin-right: 270px !important;
+  }
+}
+/* @media (max-width: 1399px) {
+  html.rtl app-sidebar .sidebar {
+    right: 230px !important;
+  }
+
+  html.rtl .main-content-main {
+    margin-right: 230px !important;
+  }
+} */
+
+@media (max-width: 1199px) {
+  html.rtl app-sidebar .sidebar {
+    right: 100px !important;
+  }
+ html.rtl app-sidebar .sidebar.collapsed {
+    right: -200px !important;
+  }
+  html.rtl .main-content-main {
+    margin-right: 220px !important;
+  }
+}
+
+/* @media (max-width: 991px) {
+  html.rtl app-sidebar .sidebar {
+    right: 145px !important;
+  }
+
+  html.rtl .main-content-main {
+    margin-right: 180px !important;
+  }
+} */
+
+@media (max-width: 768px) {
+  html.rtl app-sidebar .sidebar {
+    right: 0 !important;
+  }
+html.rtl app-sidebar .sidebar.collapsed {
+    right: -260px !important;
+  }
+  html.rtl .main-content-main {
+    margin-right: 0 !important;
+    padding: 20px 5px !important;
+  }
+
+  html.rtl .main-content-main.sidebar-collapsed {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  html.rtl .main-content-main {
+    margin-right: 0 !important;
+    padding: 15px 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html.rtl .main-content-main {
+    margin-right: 0 !important;
+    padding: 10px 0px !important;
+  }
+}
+/* COLLAPSED SIDEBAR IN RTL */
+html.rtl app-sidebar .sidebar.collapsed {
+  right: -260px !important;  /* hide it */
 }

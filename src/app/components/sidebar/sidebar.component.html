@@ -1,4 +1,4 @@
-<div class="sidebar" [class.open]="!isCollapsed">
+<div class="sidebar" [class.open]="!isCollapsed"  [class.collapsed]="isCollapsed">
   <ul class="nav flex-column sidebar-tabs ">
     <li class="nav-item">
       <a class="nav-link" routerLink="home" (click)="closeMobileSidebar()" routerLinkActive="active"

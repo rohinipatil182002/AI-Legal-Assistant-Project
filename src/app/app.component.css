@@ -10,6 +10,9 @@
 .main-content-main.sidebar-collapsed {
   margin-left: 70px;
 }
+.layout-container {
+  width: 75%;
+}
 @media (max-width: 1399px) {
   .main-content-main {
     margin-left: 230px;
@@ -22,6 +25,9 @@
 @media (max-width: 1199px) {
   .main-content-main {
     margin-left: 200px;
+  }
+  .layout-container{
+    width: 85%;
   }
 }
 
@@ -36,6 +42,7 @@
     margin-left: 0;
     padding: 20px 5px;
   }
+  
 
   .main-content-main.sidebar-collapsed {
     margin-left: 0 !important;

@@ -194,11 +194,18 @@
   font-size: 22px;
   margin-inline-end: 10px;
 }
-
+@media (max-width:1199px) {
+  .navbar-layout-width{
+    width: 85% !important;
+  }
+}
 @media (max-width: 992px) {
   .brand-subtitle {
     display: none;
   }
+      .navbar-layout-width{
+        width: 90% !important;
+    }
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
 <app-navbar  (navbarToggle)="toggleSidebarFromNavbar()"></app-navbar>
 <div style="  background-color: #f5f5f5;">
-<div class="container-fluid"  style="width: 75%;">
+<div class="container-fluid layout-container" >
 <app-sidebar #sidebar (sidebarToggled)="onSidebarToggle($event)"></app-sidebar>
 <div class="main-content-main" 
      [class.sidebar-collapsed]="isSidebarCollapsed"
