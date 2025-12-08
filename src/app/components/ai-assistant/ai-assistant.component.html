@@ -31,9 +31,6 @@
                     </div>
                 </div>
 
-                <!-- <div *ngIf="isLoading" class="message bot-msg typing">
-                    <div class="msg-text">{{ 'TYPING' | translate }}</div>
-                </div> -->
                 <div *ngIf="isLoading" class="message bot-msg typing">
                     <div class="typing-loader">
                         <span></span><span></span><span></span><span></span><span></span>
@@ -44,9 +41,15 @@
 
             <div class="input-section d-flex align-items-center">
 
-                <!-- <button class="upload-btn">
-                    <img src="assets/Images/Icon (12).svg" alt="">
-                </button> -->
+                <div class="mic-btn" (click)="toggleMic()">
+                    <i [ngClass]="{
+                       'bi': true,
+                       'bi-mic': isRecording,
+                       'text-danger': isRecording,
+                       'bi-mic-mute-fill': !isRecording
+                      }"></i>
+
+                </div>
 
                 <input type="text" class="form-control chat-input"
                     placeholder="{{ 'CHAT_INPUT_PLACEHOLDER' | translate }}" [(ngModel)]="userInput"
