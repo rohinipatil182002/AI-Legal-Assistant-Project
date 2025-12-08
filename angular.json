@@ -26,8 +26,9 @@
               "src/web.config"
             ],
             "styles": [
-              "src/styles.css",
-              "bootstrap-icons/font/bootstrap-icons.css"
+               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css"
+             
             ],
             "scripts": []
           },

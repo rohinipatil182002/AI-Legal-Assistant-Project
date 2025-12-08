@@ -42,13 +42,17 @@
             <div class="input-section d-flex align-items-center">
 
                 <div class="mic-btn" (click)="toggleMic()">
-                    <i [ngClass]="{
+                    <!-- <i [ngClass]="{
                        'bi': true,
                        'bi-mic': isRecording,
                        'text-danger': isRecording,
                        'bi-mic-mute-fill': !isRecording
-                      }"></i>
-
+                      }"></i> -->
+ <img 
+        [src]="isRecording ? 'assets/Images/mic.svg' : 'assets/Images/mic-off.svg'" 
+        class="mic-icon"
+        alt="mic"
+    />
                 </div>
 
                 <input type="text" class="form-control chat-input"
