@@ -1,4 +1,4 @@
-<div class="coming-soon-page">
+<!-- <div class="coming-soon-page">
   <div class="coming-soon-wrapper text-center">
     <h1>{{ 'COMING_SOON_TITLE' | translate }}</h1>
     <p>{{ 'COMING_SOON_DESC' | translate }}</p>
@@ -6,5 +6,44 @@
     <a routerLink="/" class="btn btn-dark mt-3">
       {{ 'GO_BACK_HOME' | translate }}
     </a>
+  </div>
+</div> -->
+
+
+<div class="summary-wrapper container py-4">
+  <div class="card summary-card shadow-sm p-4">
+
+    <h5 class="title mb-4">Legal Document Summarization</h5>
+
+    <label class="form-label fw-semibold">Upload Document</label>
+
+    <div class="upload-box d-flex flex-column justify-content-center
+                align-items-center rounded">
+      <i class="bi bi-upload upload-icon mb-2"></i>
+      <p class="text-muted mb-1">Upload a legal document to summarize</p>
+      <p class="file-types">PDF, DOC, DOCX, TXT</p>
+
+      <input type="file" class="file-input" (change)="onFileSelected($event)" />
+    </div>
+
+    <div class="mt-4">
+      <label class="form-label fw-semibold">Summary Length</label>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle w-100 border text-start" type="button" data-bs-toggle="dropdown">
+          Medium
+        </button>
+
+        <ul class="dropdown-menu w-100">
+          <li><a class="dropdown-item">Short</a></li>
+          <li><a class="dropdown-item">Medium</a></li>
+          <li><a class="dropdown-item">Long</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn btn-generate w-100 mt-4">
+      Generate Summary
+    </button>
   </div>
 </div>

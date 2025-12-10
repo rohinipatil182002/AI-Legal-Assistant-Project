@@ -1,4 +1,4 @@
-<div class="coming-soon-page">
+<!-- <div class="coming-soon-page">
   <div class="coming-soon-wrapper text-center">
     <h1>{{ 'COMING_SOON_TITLE' | translate }}</h1>
     <p>{{ 'COMING_SOON_DESC' | translate }}</p>
@@ -6,5 +6,51 @@
     <a routerLink="/" class="btn btn-dark mt-3">
       {{ 'GO_BACK_HOME' | translate }}
     </a>
+  </div>
+</div> -->
+<div class="search-card container pt-4">
+  <div class="card shadow-sm border-0 rounded-4 p-4">
+
+    <h5 class="fw-semibold mb-3">Search</h5>
+
+    <ul class="nav nav-pills mb-3 gap-2 search-tabs">
+      <li class="nav-item">
+        <button class="nav-link" 
+                [class.active]="searchType === 'keyword'" 
+                (click)="searchType = 'keyword'">
+          Keyword Search
+        </button>
+      </li>
+
+      <li class="nav-item">
+        <button class="nav-link" 
+                [class.active]="searchType === 'semantic'" 
+                (click)="searchType = 'semantic'">
+          Semantic Search
+        </button>
+      </li>
+    </ul>
+
+    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 mt-3">
+
+      <div class="position-relative flex-grow-1 w-100">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text"
+               class="form-control search-input"
+               placeholder="Describe what you're looking for..."
+               [(ngModel)]="query">
+      </div>
+
+      <button class="btn btn-success px-4 search-btn">
+        Search
+      </button>
+    </div>
+
+    <div class="mt-3">
+      <button class="btn btn-outline-success d-flex align-items-center gap-2">
+        <i class="bi bi-funnel"></i> Filter
+      </button>
+    </div>
+
   </div>
 </div>

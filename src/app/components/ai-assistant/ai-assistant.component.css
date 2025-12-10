@@ -327,11 +327,6 @@
     object-fit: contain;
 }
 
-/* ============================
-   RESPONSIVE MIC BUTTON
-============================ */
-
-/* Tablet */
 @media (max-width: 991px) {
     .mic-btn {
         width: 38px;
@@ -344,7 +339,6 @@
     }
 }
 
-/* Large Mobile */
 @media (max-width: 767px) {
     .mic-btn {
         width: 34px;
@@ -357,7 +351,6 @@
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .mic-btn {
         width: 30px;
@@ -366,7 +359,7 @@
 
     .mic-icon {
         width: 16px;
-        height: 16px;
+        height: 16px; 
     }
 }
 

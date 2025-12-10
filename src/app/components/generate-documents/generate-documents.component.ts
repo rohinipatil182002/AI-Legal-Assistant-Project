@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./generate-documents.component.css']
 })
 export class GenerateDocumentsComponent {
+selectedTemplate: string | null = null;
+
+selectTemplate(template: string) {
+  this.selectedTemplate = template;
+}
 
 }

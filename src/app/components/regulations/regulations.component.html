@@ -1,4 +1,4 @@
-<div class="coming-soon-page">
+<!-- <div class="coming-soon-page">
   <div class="coming-soon-wrapper text-center">
     <h1>{{ 'COMING_SOON_TITLE' | translate }}</h1>
     <p>{{ 'COMING_SOON_DESC' | translate }}</p>
@@ -7,4 +7,125 @@
       {{ 'GO_BACK_HOME' | translate }}
     </a>
   </div>
-</div>
+</div> -->
+
+<div class="legal-container pt-4">
+
+  <div class="legal-header mx-3">
+    <div class="container p-4">
+      <h2 class="title">
+        <i class="bi bi-book"></i> Legal Regulations & Articles
+      </h2>
+      <p class="subtitle">Browse and search Saudi legal regulations</p>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row g-3 align-items-center">
+
+      <div class="col-lg-8 col-md-7 col-12">
+        <div class="search-wrapper d-flex align-items-center">
+          <i class="bi bi-search"></i>
+          <input type="text" class="form-control search-input" placeholder="Search by keyword or article number..." />
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-12">
+        <div class="dropdown w-100">
+          <button class="btn dropdown-toggle category-btn w-100 d-flex justify-content-between align-items-center"
+            data-bs-toggle="dropdown">
+            {{ selectedCategory }}
+          </button>
+
+          <ul class="dropdown-menu w-100">
+            <li *ngFor="let cat of categories">
+              <a class="dropdown-item" (click)="selectCategory(cat)">
+                {{ cat }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-5 col-12">
+
+        <div class="reg-card" *ngFor="let reg of filteredRegulations"
+          [class.active-card]="selectedRegulation?.id === reg.id" (click)="openDetails(reg)">
+
+          <span class="tag" [ngClass]="{
+                  'commercial': reg.category === 'Commercial Law',
+                  'labor': reg.category === 'Labor Law',
+                  'civil': reg.category === 'Civil Law',
+                  'criminal': reg.category === 'Criminal Law'
+                }">
+            {{ reg.category }}
+          </span>
+
+          <h4 class="card-title">{{ reg.title }}</h4>
+          <p class="card-desc">{{ reg.desc }}</p>
+
+          <div class="meta">
+            <span><i class="bi bi-file-earmark-text"></i> {{ reg.articles.length }} Articles</span>
+            <span>{{ reg.version }}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-8 col-md-7 col-12">
+
+        <div *ngIf="!selectedRegulation" class="detail-panel">
+          <i class="bi bi-book blank-icon"></i>
+          <h4>Select a regulation to view details</h4>
+          <p>Choose from the list on the left</p>
+        </div>
+        <div *ngIf="selectedRegulation">
+          <div class="details-card p-4">
+
+            <span class="tag commercial">{{ selectedRegulation.category }}</span>
+
+            <h5 class="fw-bold mt-3">{{ selectedRegulation.title }}</h5>
+            <p>{{ selectedRegulation.desc }}</p>
+
+            <div class="d-flex gap-2 my-3">
+              <button class="btn btn-light"><i class="bi bi-text-paragraph"></i> Summarize</button>
+              <button class="btn btn-light"><i class="bi bi-stars"></i> Ask AI</button>
+            </div>
+
+          </div>
+          <div class="card rounded-4 p-3 mt-3">
+            <h5><i class="bi bi-journal-text text-danger"></i> Articles</h5>
+
+            <div *ngFor="let art of selectedRegulation.articles" class="article-box mt-3 p-3">
+              <div class="d-flex align-items-center gap-3">
+                <span class="article-number">Art. {{ art.number }}</span>
+                <h6 class="fw-bold m-0">{{ art.title }}</h6>
+              </div>
+              <p class="mt-2">{{ art.text }}</p>
+            </div>
+          </div>
+          <div class="related-law-card card p-3 mt-3 rounded-4" *ngIf="selectedRegulation?.relatedLaws?.length">
+            <h5><i class="bi bi-link-45deg text-primary"></i> Related Laws</h5>
+
+            <div class="row g-3 mt-2">
+              <div class="col-6" *ngFor="let law of selectedRegulation.relatedLaws">
+                <div class="card rounded-4 p-2">
+                  <h6 class="m-0">
+                    <i class="bi bi-journal-text text-primary"></i> {{ law.title }}
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>

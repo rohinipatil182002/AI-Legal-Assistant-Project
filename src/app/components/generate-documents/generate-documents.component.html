@@ -1,4 +1,4 @@
-<div class="coming-soon-page">
+<!-- <div class="coming-soon-page">
   <div class="coming-soon-wrapper text-center">
     <h1>{{ 'COMING_SOON_TITLE' | translate }}</h1>
     <p>{{ 'COMING_SOON_DESC' | translate }}</p>
@@ -7,4 +7,78 @@
       {{ 'GO_BACK_HOME' | translate }}
     </a>
   </div>
+</div> -->
+
+<div class="generation-wrapper container py-4">
+  <div class="card generation-card shadow-sm p-4">
+
+    <h4 class="title mb-3">Legal Document Generation</h4>
+
+    <label class="form-label fw-semibold">Select Template</label>
+
+      <div class="dropdown mb-3">
+      <button class="btn dropdown-toggle w-100 border-0 text-start" type="button"
+        data-bs-toggle="dropdown">
+        {{ selectedTemplate || 'Select Template' }}
+      </button>
+
+      <ul class="dropdown-menu w-100">
+        <li><a class="dropdown-item" (click)="selectTemplate('Commercial Contract')"  [class.active-template]="selectedTemplate === 'Commercial Contract'">Commercial Contract</a></li>
+        <li><a class="dropdown-item" (click)="selectTemplate('Non-Disclosure Agreement')"   [class.active-template]="selectedTemplate === 'Non-Disclosure Agreement'">Non-Disclosure Agreement</a></li>
+      </ul>
+    </div>
+
+    <hr *ngIf="selectedTemplate" />
+
+   <form class="mt-3 commercial-contract" *ngIf="selectedTemplate === 'Commercial Contract'">
+
+      <h6 class="details-title">Template Details</h6>
+
+      <label class="form-label">First Party Name <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Second Party Name <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Contract Subject <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Contract Value <span class="text-danger fw-bold">*</span> </label>
+      <input type="number" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Contract Date <span class="text-danger fw-bold">*</span> </label>
+      <div class="input-group mb-4">
+        <input type="date" class="form-control custom-input" />
+        <!-- <span class="input-group-text"><i class="bi bi-calendar"></i></span> -->
+      </div>
+
+      <button type="button" class="btn btn-generate w-100">
+        <i class="bi bi-file-earmark-check me-2"></i> Generate Draft
+      </button>
+    </form>
+
+ <form class="mt-3 Non-Disclosure-Agreement" *ngIf="selectedTemplate === 'Non-Disclosure Agreement'">
+
+       <h6 class="details-title">Template Details</h6>
+
+      <label class="form-label">Disclosing Party <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Receiving Party <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Purpose <span class="text-danger fw-bold">*</span> </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">Duration (years) <span class="text-danger fw-bold">*</span> </label>
+      <input type="number" class="form-control custom-input mb-3" />
+
+      <button type="button" class="btn btn-generate w-100">
+        <i class="bi bi-file-earmark-check me-2"></i> Generate Draft
+      </button>
+
+    </form>
+
+  </div>
 </div>
+
