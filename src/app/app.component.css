@@ -13,6 +13,12 @@
 .layout-container {
   width: 75%;
 }
+@media (max-width:1440.2px) {
+  .layout-container{
+    width: 80%;
+  }
+  
+}
 @media (max-width: 1399px) {
   .main-content-main {
     margin-left: 230px;
@@ -27,7 +33,7 @@
     margin-left: 200px;
   }
   .layout-container{
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -40,9 +46,11 @@
 @media (max-width: 768px) {
   .main-content-main {
     margin-left: 0;
-    padding: 20px 5px;
+    padding-bottom: 20px;
   }
-  
+  .layout-container{
+    width: 100%;
+  }
 
   .main-content-main.sidebar-collapsed {
     margin-left: 0 !important;

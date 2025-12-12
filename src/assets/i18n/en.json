@@ -53,5 +53,99 @@
   "CHAT_PLACEHOLDER_SUBTITLE": "Type your question below to get started",
   "CHAT_INPUT_PLACEHOLDER": "Describe your legal question or case...",
   "TYPING": "Typing...",
-  "SEND": "Send"
+  "SEND": "Send",
+
+   "SUMMARIZE_DOCUMENT": "Legal Document Summarization",
+  "UPLOAD_DOCUMENT": "Upload Document",
+  "UPLOAD_MESSAGE": "Upload a legal document to summarize",
+  "FILE_TYPES": "PDF, DOC, DOCX, TXT",
+  "SUMMARY_LENGTH": "Summary Length",
+  "SHORT": "Short",
+  "MEDIUM": "Medium",
+  "LONG": "Long",
+  "GENERATE_SUMMARY": "Generate Summary",
+
+   "DOCUMENT_GENERATION": "Legal Document Generation",
+  "SELECT_TEMPLATE": "Select Template",
+  "TEMPLATE_DETAILS": "Template Details",
+
+  "COMMERCIAL_CONTRACT": "Commercial Contract",
+  "NDA": "Non-Disclosure Agreement",
+
+  "FIRST_PARTY": "First Party Name",
+  "SECOND_PARTY": "Second Party Name",
+  "CONTRACT_SUBJECT": "Contract Subject",
+  "CONTRACT_VALUE": "Contract Value",
+  "CONTRACT_DATE": "Contract Date",
+
+  "DISCLOSING_PARTY": "Disclosing Party",
+  "RECEIVING_PARTY": "Receiving Party",
+  "PURPOSE": "Purpose",
+  "DURATION_YEARS": "Duration (years)",
+
+  "GENERATE_DRAFT": "Generate Draft",
+  "LEGAL_REGULATIONS": "Legal Regulations & Articles",
+  "LEGAL_SUBTITLE": "Browse and search Saudi legal regulations",
+
+  "SEARCH_PLACEHOLDER_FOR_ARTICLE": "Search by keyword or article number...",
+  "ALL_CATEGORIES": "All Categories",
+  "COMMERCIAL_LAW": "Commercial Law",
+  "CRIMINAL_LAW": "Criminal Law",
+  "CIVIL_LAW": "Civil Law",
+  "LABOR_LAW": "Labor Law",
+
+  "SELECT_REGULATION": "Select a regulation to view details",
+  "SELECT_REGULATION_SUB": "Choose from the list on the left",
+
+  "ASK_AI": "Ask AI",
+
+  "ARTICLES": "Articles",
+  "RELATED_LAWS": "Related Laws",
+
+  "ARTICLE_PREFIX": "Art.",
+  "VERSION": "Version",
+  "REG1_TITLE": "Commercial Courts Law",
+  "REG1_DESC": "This law regulates commercial courts and commercial disputes in the Kingdom of Saudi Arabia.",
+  "REG1_ART1_TITLE": "Court Establishment",
+  "REG1_ART1_TEXT": "Commercial courts shall be established by a decision of the Supreme Judicial Council.",
+  "REG1_ART2_TITLE": "Jurisdiction",
+  "REG1_ART2_TEXT": "Commercial courts shall have jurisdiction over commercial disputes.",
+  "REG1_ART3_TITLE": "Appeal Procedures",
+  "REG1_ART3_TEXT": "Judgments may be appealed within thirty days.",
+  "REG1_RELATED1": "Companies Law",
+  "REG1_RELATED2": "Bankruptcy Law",
+  "REG1_RELATED3": "Commercial Registration Law",
+
+
+  "REG2_TITLE": "Labor Law",
+  "REG2_DESC": "This law regulates the relationship between employers and employees.",
+  "REG2_ART1_TITLE": "Application Scope",
+  "REG2_ART1_TEXT": "This law applies to all employees except specific categories.",
+  "REG2_ART2_TITLE": "Employment Contract",
+  "REG2_ART2_TEXT": "The contract must be written in Arabic.",
+  "REG2_RELATED1": "Social Insurance Law",
+  "REG2_RELATED2": "Occupational Health and Safety Law",
+
+
+  "REG3_TITLE": "Civil Transactions Law",
+  "REG3_DESC": "This law regulates civil transactions between individuals.",
+  "REG3_ART1_TITLE": "Contract Formation",
+  "REG3_ART1_TEXT": "A contract is formed when an offer is accepted.",
+  "REG3_RELATED1": "Real Estate Law",
+  "REG3_RELATED2": "Personal Status Law",
+
+
+  "REG4_TITLE": "Criminal Procedures Law",
+  "REG4_DESC": "This law regulates criminal investigation procedures.",
+  "REG4_ART1_TITLE": "Investigation Authority",
+  "REG4_ART1_TEXT": "The Public Prosecution conducts investigations.",
+  "REG4_RELATED1": "Law of Criminal Procedure",
+  "REG4_RELATED2": "Evidence Law",
+
+  "SEARCH_TITLE": "Search",
+  "KEYWORD_SEARCH": "Keyword Search",
+  "SEMANTIC_SEARCH": "Semantic Search",
+  "SEARCH_PLACEHOLDER_FOR_SEARCH": "Describe what you're looking for...",
+  "SEARCH_BUTTON_FOR_SEARCH": "Search",
+  "FILTER_BUTTON": "Filter"
 }

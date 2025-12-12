@@ -53,5 +53,99 @@
   "CHAT_PLACEHOLDER_SUBTITLE": "اكتب سؤالك أدناه للبدء",
   "CHAT_INPUT_PLACEHOLDER": "صف سؤالك أو قضيتك القانونية...",
   "TYPING": "يكتب...",
-  "SEND": "إرسال"
+  "SEND": "إرسال",
+  "SUMMARIZE_DOCUMENT": "تلخيص الوثيقة القانونية",
+  "UPLOAD_DOCUMENT": "تحميل الوثيقة",
+  "UPLOAD_MESSAGE": "قم بتحميل وثيقة قانونية لتلخيصها",
+  "FILE_TYPES": "PDF, DOC, DOCX, TXT",
+  "SUMMARY_LENGTH": "طول الملخص",
+  "SHORT": "قصير",
+  "MEDIUM": "متوسط",
+  "LONG": "طويل",
+  "GENERATE_SUMMARY": "إنشاء الملخص",
+   "DOCUMENT_GENERATION": "إنشاء وثيقة قانونية",
+  "SELECT_TEMPLATE": "اختر القالب",
+  "TEMPLATE_DETAILS": "تفاصيل القالب",
+
+  "COMMERCIAL_CONTRACT": "عقد تجاري",
+  "NDA": "اتفاقية عدم الإفصاح",
+
+  "FIRST_PARTY": "اسم الطرف الأول",
+  "SECOND_PARTY": "اسم الطرف الثاني",
+  "CONTRACT_SUBJECT": "موضوع العقد",
+  "CONTRACT_VALUE": "قيمة العقد",
+  "CONTRACT_DATE": "تاريخ العقد",
+
+  "DISCLOSING_PARTY": "الطرف المفصح",
+  "RECEIVING_PARTY": "الطرف المستلم",
+  "PURPOSE": "الغرض",
+  "DURATION_YEARS": "المدة (بالسنوات)",
+
+  "GENERATE_DRAFT": "إنشاء المسودة",
+  "LEGAL_REGULATIONS": "الأنظمة والمواد القانونية",
+  "LEGAL_SUBTITLE": "تصفح وابحث في الأنظمة القانونية السعودية",
+
+  "SEARCH_PLACEHOLDER_FOR_ARTICLE": "ابحث بالكلمة المفتاحية أو رقم المادة...",
+  "ALL_CATEGORIES": "جميع الفئات",
+  "COMMERCIAL_LAW": "القانون التجاري",
+  "CRIMINAL_LAW": "القانون الجنائي",
+  "CIVIL_LAW": "القانون المدني",
+  "LABOR_LAW": "قانون العمل",
+
+  "SELECT_REGULATION": "اختر نظاماً لعرض التفاصيل",
+  "SELECT_REGULATION_SUB": "اختر من القائمة على اليسار",
+
+  "ASK_AI": "اسأل الذكاء الاصطناعي",
+
+  "ARTICLES": "المواد",
+  "RELATED_LAWS": "الأنظمة ذات الصلة",
+
+  "ARTICLE_PREFIX": "مادة",
+  "VERSION": "الإصدار",
+  "REG1_TITLE": "نظام المحاكم التجارية",
+  "REG1_DESC": "ينظم هذا النظام المحاكم التجارية والنزاعات التجارية في المملكة العربية السعودية.",
+  "REG1_ART1_TITLE": "إنشاء المحكمة",
+  "REG1_ART1_TEXT": "تُنشأ المحاكم التجارية بقرار من المجلس الأعلى للقضاء.",
+  "REG1_ART2_TITLE": "الاختصاص",
+  "REG1_ART2_TEXT": "تختص المحاكم التجارية بالنظر في المنازعات التجارية.",
+  "REG1_ART3_TITLE": "إجراءات الاستئناف",
+  "REG1_ART3_TEXT": "يجوز استئناف الأحكام خلال ثلاثين يومًا.",
+  "REG1_RELATED1": "نظام الشركات",
+  "REG1_RELATED2": "نظام الإفلاس",
+  "REG1_RELATED3": "نظام السجل التجاري",
+
+
+  "REG2_TITLE": "نظام العمل",
+  "REG2_DESC": "ينظم هذا النظام العلاقة بين أصحاب العمل والعمال.",
+  "REG2_ART1_TITLE": "نطاق التطبيق",
+  "REG2_ART1_TEXT": "يطبق هذا النظام على جميع العمال باستثناء فئات محددة.",
+  "REG2_ART2_TITLE": "عقد العمل",
+  "REG2_ART2_TEXT": "يجب أن يكون عقد العمل مكتوبًا باللغة العربية.",
+  "REG2_RELATED1": "نظام التأمينات الاجتماعية",
+  "REG2_RELATED2": "نظام السلامة والصحة المهنية",
+
+
+  "REG3_TITLE": "نظام المعاملات المدنية",
+  "REG3_DESC": "ينظم هذا النظام المعاملات المدنية بين الأفراد.",
+  "REG3_ART1_TITLE": "تكوين العقد",
+  "REG3_ART1_TEXT": "ينعقد العقد عندما يتم قبول الإيجاب بطريقة تدل على الرضا.",
+  "REG3_RELATED1": "نظام العقارات",
+  "REG3_RELATED2": "نظام الأحوال الشخصية",
+
+
+  "REG4_TITLE": "نظام الإجراءات الجزائية",
+  "REG4_DESC": "ينظم هذا النظام إجراءات التحقيق في القضايا الجنائية.",
+  "REG4_ART1_TITLE": "سلطة التحقيق",
+  "REG4_ART1_TEXT": "تتولى النيابة العامة التحقيق في القضايا الجنائية.",
+  "REG4_RELATED1": "نظام الإجراءات الجزائية",
+  "REG4_RELATED2": "نظام الإثبات",
+  
+  "SEARCH_TITLE": "البحث",
+  "KEYWORD_SEARCH": "بحث بالكلمات المفتاحية",
+  "SEMANTIC_SEARCH": "بحث دلالي",
+  "SEARCH_PLACEHOLDER_FOR_SEARCH": "صف ما تبحث عنه...",
+  "SEARCH_BUTTON_FOR_SEARCH": "بحث",
+  "FILTER_BUTTON": "تصفية"
+
+
 }

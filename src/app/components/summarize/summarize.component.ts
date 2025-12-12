@@ -10,4 +10,10 @@ onFileSelected(event: any) {
     const file = event.target.files[0];
     console.log("Uploaded File:", file);
   }
+  selectedLength = 'MEDIUM';
+
+setLength(type: string) {
+  this.selectedLength = type;
+}
+
 }

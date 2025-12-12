@@ -114,6 +114,7 @@ export class AiAssistantComponent {
         this.textToSpeech.speak(res.result || res.answer || '');
         this.scrollToBottom();
         this.userInput = '';
+        this.resetTextarea();
       },
       error: () => {
         this.isLoading = false;
@@ -126,8 +127,21 @@ export class AiAssistantComponent {
         this.textToSpeech.speak(errorText);
         this.scrollToBottom();
         this.userInput = '';
+        this.resetTextarea();
       }
     });
+  }
+
+  autoResize(event: any) {
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+  }
+  resetTextarea() {
+    const ta = document.querySelector('.auto-expand') as HTMLTextAreaElement;
+    if (ta) {
+      ta.style.height = '40px';
+    }
   }
 
 }

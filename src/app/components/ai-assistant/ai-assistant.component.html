@@ -5,7 +5,7 @@
             <div class="header-icon">
                 <img class="img-bg" src="assets/Images/Icon (11).svg" alt="">
             </div>
-            <div>
+            <div class="align-items-start">
                 <h2 class="header-title mb-0">{{ 'AI_ASSISTANT_HEADER' | translate }}</h2>
                 <p class="header-subtitle mb-0">{{ 'AI_ASSISTANT_SUBTITLE' | translate }}</p>
             </div>
@@ -17,7 +17,7 @@
 
             <div class="chat-center-content text-center" *ngIf="messages.length === 0 && !isLoading">
                 <div class="chat-icon">
-                    <img src="assets/Images/Icon (10).svg" alt="">
+                    <img src="assets/Images/Icon (10).svg" alt="" class="chat-icon-img">
                 </div>
                 <h5 class="chat-title">{{ 'CHAT_PLACEHOLDER_TITLE' | translate }}</h5>
                 <p class="chat-subtitle">{{ 'CHAT_PLACEHOLDER_SUBTITLE' | translate }}</p>
@@ -42,22 +42,18 @@
             <div class="input-section d-flex align-items-center">
 
                 <div class="mic-btn" (click)="toggleMic()">
-                    <!-- <i [ngClass]="{
-                       'bi': true,
-                       'bi-mic': isRecording,
-                       'text-danger': isRecording,
-                       'bi-mic-mute-fill': !isRecording
-                      }"></i> -->
- <img 
-        [src]="isRecording ? 'assets/Images/mic.svg' : 'assets/Images/mic-off.svg'" 
-        class="mic-icon"
-        alt="mic"
-    />
+
+                    <img [src]="isRecording ? 'assets/Images/mic.svg' : 'assets/Images/mic-off.svg'" class="mic-icon"
+                        alt="mic" />
                 </div>
 
-                <input type="text" class="form-control chat-input"
+                <!-- <input type="text" class="form-control chat-input"
                     placeholder="{{ 'CHAT_INPUT_PLACEHOLDER' | translate }}" [(ngModel)]="userInput"
-                    (keyup.enter)="sendMessage()" />
+                    (keyup.enter)="sendMessage()" /> -->
+                <textarea class="form-control chat-input auto-expand" rows="1" [(ngModel)]="userInput"
+                    placeholder="{{ 'CHAT_INPUT_PLACEHOLDER' | translate }}" (input)="autoResize($event)"
+                    (keydown.enter)="sendMessage()"></textarea>
+
 
                 <button class="send-btn" (click)="sendMessage()">
                     <img src="assets/Images/Icon (13).svg" alt="">

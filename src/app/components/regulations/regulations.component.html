@@ -9,7 +9,7 @@
   </div>
 </div> -->
 
-<div class="legal-container pt-4">
+<!-- <div class="legal-container pt-4">
 
   <div class="legal-header mx-3">
     <div class="container p-4">
@@ -128,4 +128,141 @@
       </div>
     </div>
 
+  </div> -->
+
+<div class="legal-container pt-4">
+
+  <div class="legal-header mx-3">
+    <div class="container p-4">
+      <h2 class="title">
+        <i class="bi bi-book"></i> {{ 'LEGAL_REGULATIONS' | translate }}
+      </h2>
+      <p class="subtitle">{{ 'LEGAL_SUBTITLE' | translate }}</p>
+    </div>
   </div>
+
+  <div class="container mt-4">
+    <div class="row g-3 align-items-center">
+
+      <div class="col-lg-8 col-md-7 col-12">
+        <div class="search-wrapper d-flex align-items-center">
+          <i class="bi bi-search"></i>
+          <input type="text" class="form-control search-input"
+            [placeholder]="'SEARCH_PLACEHOLDER_FOR_ARTICLE' | translate" />
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-12">
+        <div class="dropdown w-100">
+          <button class="btn dropdown-toggle category-btn w-100 d-flex justify-content-between align-items-center"
+            data-bs-toggle="dropdown">
+            {{ selectedCategory | translate }}
+          </button>
+
+          <ul class="dropdown-menu w-100">
+            <li *ngFor="let cat of categories">
+              <a class="dropdown-item" (click)="selectCategory(cat)">
+                {{ cat | translate }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-5 col-12">
+
+        <div class="reg-card" *ngFor="let reg of filteredRegulations"
+          [class.active-card]="selectedRegulation?.id === reg.id" (click)="openDetails(reg)">
+
+          <span class="tag" [ngClass]="{
+              'commercial': reg.category === 'COMMERCIAL_LAW',
+              'labor': reg.category === 'LABOR_LAW',
+              'civil': reg.category === 'CIVIL_LAW',
+              'criminal': reg.category === 'CRIMINAL_LAW'
+            }">
+            {{ reg.category | translate }}
+          </span>
+
+          <h4 class="card-title">{{ reg.title | translate }}</h4>
+          <p class="card-desc">{{ reg.desc | translate }}</p>
+
+          <div class="meta">
+            <span><i class="bi bi-file-earmark-text"></i> {{ reg.articles.length }} {{ 'ARTICLES' | translate }}</span>
+            <span>{{ reg.version }}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-8 col-md-7 col-12">
+
+        <div *ngIf="!selectedRegulation" class="detail-panel">
+          <i class="bi bi-book blank-icon"></i>
+          <h4>{{ 'SELECT_REGULATION' | translate }}</h4>
+          <p>{{ 'SELECT_REGULATION_SUB' | translate }}</p>
+        </div>
+
+        <div *ngIf="selectedRegulation">
+          <div class="details-card p-4">
+
+            <span class="tag commercial">{{ selectedRegulation.category | translate }}</span>
+
+            <h5 class="fw-bold mt-3">{{ selectedRegulation.title | translate }}</h5>
+            <p>{{ selectedRegulation.desc | translate }}</p>
+
+            <div class="d-flex gap-2 my-3">
+              <button class="btn btn-light">
+                <i class="bi bi-text-paragraph"></i> {{ 'SUMMARIZE' | translate }}
+              </button>
+              <button class="btn btn-light">
+                <i class="bi bi-stars"></i> {{ 'ASK_AI' | translate }}
+              </button>
+            </div>
+
+          </div>
+
+          <div class="card rounded-4 p-3 mt-3">
+            <h5>
+              <i class="bi bi-journal-text text-danger"></i> {{ 'ARTICLES' | translate }}
+            </h5>
+
+            <div *ngFor="let art of selectedRegulation.articles" class="article-box mt-3 p-3">
+              <div class="d-flex align-items-center gap-3">
+                <span class="article-number">
+                  {{ 'ARTICLE_PREFIX' | translate }} {{ art.number }}
+                </span>
+                <h6 class="fw-bold m-0">{{ art.title| translate }}</h6>
+              </div>
+              <p class="mt-2">{{ art.text | translate }}</p>
+            </div>
+          </div>
+
+          <div class="related-law-card card p-3 mt-3 rounded-4" *ngIf="selectedRegulation?.relatedLaws?.length">
+            <h5>
+              <i class="bi bi-link-45deg text-primary"></i> {{ 'RELATED_LAWS' | translate }}
+            </h5>
+
+            <div class="row g-3 mt-2">
+              <div class="col-6" *ngFor="let law of selectedRegulation.relatedLaws">
+                <div class="card rounded-4 p-2">
+                  <h6 class="m-0">
+                    <i class="bi bi-journal-text text-primary"></i> {{ law.title | translate }}
+                  </h6>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

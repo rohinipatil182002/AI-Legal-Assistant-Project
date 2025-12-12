@@ -9,7 +9,7 @@
   </div>
 </div> -->
 
-<div class="generation-wrapper container py-4">
+<!-- <div class="generation-wrapper container py-4">
   <div class="card generation-card shadow-sm p-4">
 
     <h4 class="title mb-3">Legal Document Generation</h4>
@@ -49,7 +49,7 @@
       <label class="form-label">Contract Date <span class="text-danger fw-bold">*</span> </label>
       <div class="input-group mb-4">
         <input type="date" class="form-control custom-input" />
-        <!-- <span class="input-group-text"><i class="bi bi-calendar"></i></span> -->
+        <span class="input-group-text"><i class="bi bi-calendar"></i></span> 
       </div>
 
       <button type="button" class="btn btn-generate w-100">
@@ -75,6 +75,114 @@
 
       <button type="button" class="btn btn-generate w-100">
         <i class="bi bi-file-earmark-check me-2"></i> Generate Draft
+      </button>
+
+    </form>
+
+  </div>
+</div> -->
+
+<div class="generation-wrapper container py-4">
+  <div class="card generation-card shadow-sm p-4">
+
+    <h4 class="title mb-3">{{ 'DOCUMENT_GENERATION' | translate }}</h4>
+
+    <label class="form-label fw-semibold">{{ 'SELECT_TEMPLATE' | translate }}</label>
+
+    <div class="dropdown mb-3">
+      <button class="btn dropdown-toggle w-100 border-0 text-start"
+              type="button"
+              data-bs-toggle="dropdown">
+        {{ selectedTemplate ? (selectedTemplate | translate) : ('SELECT_TEMPLATE' | translate) }}
+      </button>
+
+      <ul class="dropdown-menu w-100">
+        <li>
+          <a class="dropdown-item"
+             (click)="selectTemplate('COMMERCIAL_CONTRACT')"
+             [class.active-template]="selectedTemplate === 'COMMERCIAL_CONTRACT'">
+             {{ 'COMMERCIAL_CONTRACT' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a class="dropdown-item"
+             (click)="selectTemplate('NDA')"
+             [class.active-template]="selectedTemplate === 'NDA'">
+             {{ 'NDA' | translate }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <hr *ngIf="selectedTemplate" />
+
+    <form class="mt-3 commercial-contract"
+          *ngIf="selectedTemplate === 'COMMERCIAL_CONTRACT'">
+
+      <h6 class="details-title">{{ 'TEMPLATE_DETAILS' | translate }}</h6>
+
+      <label class="form-label">
+        {{ 'FIRST_PARTY' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'SECOND_PARTY' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'CONTRACT_SUBJECT' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'CONTRACT_VALUE' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="number" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'CONTRACT_DATE' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <div class="input-group mb-4">
+        <input type="date" class="form-control custom-input" />
+      </div>
+
+      <button type="button" class="btn btn-generate w-100">
+        <i class="bi bi-file-earmark-check me-2"></i>
+        {{ 'GENERATE_DRAFT' | translate }}
+      </button>
+    </form>
+
+    <form class="mt-3 Non-Disclosure-Agreement"
+          *ngIf="selectedTemplate === 'NDA'">
+
+      <h6 class="details-title">{{ 'TEMPLATE_DETAILS' | translate }}</h6>
+
+      <label class="form-label">
+        {{ 'DISCLOSING_PARTY' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'RECEIVING_PARTY' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'PURPOSE' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="text" class="form-control custom-input mb-3" />
+
+      <label class="form-label">
+        {{ 'DURATION_YEARS' | translate }} <span class="text-danger fw-bold">*</span>
+      </label>
+      <input type="number" class="form-control custom-input mb-3" />
+
+      <button type="button" class="btn btn-generate w-100">
+        <i class="bi bi-file-earmark-check me-2"></i>
+        {{ 'GENERATE_DRAFT' | translate }}
       </button>
 
     </form>

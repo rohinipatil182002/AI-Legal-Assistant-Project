@@ -5,7 +5,7 @@ html.rtl body {
 
 html.rtl app-sidebar .sidebar {
   left: auto !important;
-  right: 260px !important;
+  right: 240px !important;
 }
 
 html.rtl .main-content-main {
@@ -24,17 +24,17 @@ html.rtl .main-content-main.sidebar-collapsed {
 }
 @media (max-width: 1599px) {
   html.rtl app-sidebar .sidebar {
-    right: 220px !important;
+    right: 190px!important;
   }
 
   html.rtl .main-content-main {
-    margin-right: 270px !important;
+    margin-right: 290px !important;
   }
 }
 
 @media (max-width: 1199px) {
   html.rtl app-sidebar .sidebar {
-    right: 100px !important;
+    right: 80px !important;
   }
  html.rtl app-sidebar .sidebar.collapsed {
     right: -200px !important;
@@ -53,7 +53,6 @@ html.rtl app-sidebar .sidebar.collapsed {
   }
   html.rtl .main-content-main {
     margin-right: 0 !important;
-    padding: 20px 5px !important;
   }
 
   html.rtl .main-content-main.sidebar-collapsed {
